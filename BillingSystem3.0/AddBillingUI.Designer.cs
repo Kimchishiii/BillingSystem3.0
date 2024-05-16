@@ -88,6 +88,7 @@
             // 
             this.txtTotalAmount.Location = new System.Drawing.Point(118, 176);
             this.txtTotalAmount.Name = "txtTotalAmount";
+            this.txtTotalAmount.ReadOnly = true;
             this.txtTotalAmount.Size = new System.Drawing.Size(246, 23);
             this.txtTotalAmount.TabIndex = 3;
             this.txtTotalAmount.Text = "0.00";
@@ -123,6 +124,7 @@
             // 
             this.txtHomeOwnerName.Location = new System.Drawing.Point(118, 58);
             this.txtHomeOwnerName.Name = "txtHomeOwnerName";
+            this.txtHomeOwnerName.ReadOnly = true;
             this.txtHomeOwnerName.Size = new System.Drawing.Size(246, 23);
             this.txtHomeOwnerName.TabIndex = 3;
             // 
@@ -139,6 +141,7 @@
             // 
             this.txtGrossAmount.Location = new System.Drawing.Point(118, 96);
             this.txtGrossAmount.Name = "txtGrossAmount";
+            this.txtGrossAmount.ReadOnly = true;
             this.txtGrossAmount.Size = new System.Drawing.Size(246, 23);
             this.txtGrossAmount.TabIndex = 3;
             this.txtGrossAmount.Text = "0.00";

@@ -16,6 +16,7 @@ namespace BillingSystem3._0
     public partial class BillingUI : Form
     {
         List<Billings> readings;
+        List<Invoices> invoices;
         List<Billings> billings;
         List<GarbageCollections> garbageCollections;
         List<InvoiceDetails> fdetails;
@@ -62,7 +63,8 @@ namespace BillingSystem3._0
             }
 
             dtgRecords2.DataSource = fdetails;
-
+            dtgRecords2.Columns["InvoiceId"].Visible = false;
+            dtgRecords2.Columns["InvoiceDetailId"].Visible = false;
         }
         public void AddTotals()
         {
@@ -86,7 +88,7 @@ namespace BillingSystem3._0
         }
         public void FetchGarbageCollections()
         {
-            string selectquery = "select HomeOwnerId, FullName, DATEDIFF(MONTH, LastCollected, GETDATE()) AS MonthsDue,(DATEDIFF(MONTH, LastCollected, GETDATE()) * GarbageCollectionFee) AS TotalAmount from HomeOwners";
+            string selectquery = "select HomeOwnerId, FullName, DATEDIFF(MONTH, LastCollected, GETDATE()) AS MonthsDue,(DATEDIFF(MONTH, LastCollected, GETDATE()) * GarbageCollectionFee) AS TotalAmount from HomeOwners WHERE (DATEDIFF(MONTH, LastCollected, GETDATE()) * GarbageCollectionFee) != 0";
             SqlDataAdapter adpt = new SqlDataAdapter(selectquery, conn);
             DataTable table = new DataTable();
             adpt.Fill(table);
@@ -157,8 +159,11 @@ namespace BillingSystem3._0
         private void button3_Click(object sender, EventArgs e)
         {
             Invoices data = GetData();
-            AddBillingUI display = new AddBillingUI(data,"save");
+            AddBillingUI display = new AddBillingUI(data,"save",fdetails);
             display.ShowDialog();
+            FetchInvoices();
+            FetchGarbageCollections();
+            FetchReadings();
         }
 
         private Invoices GetData()
@@ -172,5 +177,57 @@ namespace BillingSystem3._0
             };
         }
 
+        public void FetchInvoices()
+        {
+            string selectquery = "select * from Invoices";
+            SqlDataAdapter adpt = new SqlDataAdapter(selectquery, conn);
+            DataTable table = new DataTable();
+            adpt.Fill(table);
+            invoices = new List<Invoices>();
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                Invoices invoice = new Invoices();
+                invoice.InvoiceId = Convert.ToInt32(table.Rows[i]["InvoiceId"]);
+                invoice.TransDate = Convert.ToDateTime(table.Rows[i]["TransDate"]);
+                invoice.HomeOwnerId = Convert.ToInt32(table.Rows[i]["HomeOwnerId"]);
+                invoice.FullName = Convert.ToString(table.Rows[i]["FullName"]);
+                invoice.GrossAmount = Convert.ToDecimal(table.Rows[i]["GrossAmount"]);
+                invoice.Deductions = Convert.ToDecimal(table.Rows[i]["Deductions"]);
+                invoice.NetAmount = Convert.ToDecimal(table.Rows[i]["NetAmount"]);
+                invoice.Remarks = Convert.ToString(table.Rows[i]["Remarks"]);
+                invoice.Created_at = Convert.ToDateTime(table.Rows[i]["Created_at"]);
+                invoices.Add(invoice);
+            }
+            dtgRecords3.DataSource = invoices;
+        }
+
+        private void btnShowInvoices_Click(object sender, EventArgs e)
+        {
+            FetchInvoices();
+        }
+
+        private void btnEditInvoice_Click(object sender, EventArgs e)
+        {
+            Invoices data = GetData2();
+            AddBillingUI display = new AddBillingUI(data,"update",null);
+            display.ShowDialog();
+            FetchInvoices();
+        }
+        private Invoices GetData2()
+        {
+            DataGridViewRow selectedRow = dtgRecords3.CurrentRow;
+            return new Invoices
+            {
+                InvoiceId = Convert.ToInt32(selectedRow.Cells["InvoiceId"].Value),
+                TransDate = Convert.ToDateTime(selectedRow.Cells["TransDate"].Value),
+                HomeOwnerId = Convert.ToInt32(selectedRow.Cells["HomeOwnerId"].Value),
+                FullName = selectedRow.Cells["FullName"].Value.ToString(),
+                GrossAmount = Convert.ToDecimal(selectedRow.Cells["GrossAmount"].Value),
+                Deductions = Convert.ToDecimal(selectedRow.Cells["Deductions"].Value),
+                NetAmount = Convert.ToDecimal(selectedRow.Cells["NetAmount"].Value),
+                Created_at = Convert.ToDateTime(selectedRow.Cells["Created_at"].Value),
+                Remarks = selectedRow.Cells["Remarks"].Value.ToString(),
+            };
+        }
     }
 }

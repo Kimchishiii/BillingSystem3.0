@@ -39,10 +39,19 @@
             this.dtgRecords = new System.Windows.Forms.DataGridView();
             this.dtgRecords2 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnShowInvoices = new System.Windows.Forms.Button();
+            this.dtgRecords3 = new System.Windows.Forms.DataGridView();
+            this.btnEditInvoice = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgRecords)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgRecords2)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgRecords3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -56,7 +65,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1158, 98);
+            this.panel1.Size = new System.Drawing.Size(1186, 98);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -121,7 +130,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 98);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(558, 467);
+            this.panel2.Size = new System.Drawing.Size(558, 504);
             this.panel2.TabIndex = 1;
             // 
             // dtgRecords
@@ -133,7 +142,7 @@
             this.dtgRecords.Name = "dtgRecords";
             this.dtgRecords.ReadOnly = true;
             this.dtgRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgRecords.Size = new System.Drawing.Size(558, 467);
+            this.dtgRecords.Size = new System.Drawing.Size(558, 504);
             this.dtgRecords.TabIndex = 0;
             this.dtgRecords.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgRecords_MouseClick);
             // 
@@ -142,11 +151,11 @@
             this.dtgRecords2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgRecords2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgRecords2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgRecords2.Location = new System.Drawing.Point(558, 98);
+            this.dtgRecords2.Location = new System.Drawing.Point(0, 0);
             this.dtgRecords2.Name = "dtgRecords2";
             this.dtgRecords2.ReadOnly = true;
             this.dtgRecords2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgRecords2.Size = new System.Drawing.Size(600, 467);
+            this.dtgRecords2.Size = new System.Drawing.Size(623, 209);
             this.dtgRecords2.TabIndex = 2;
             // 
             // panel3
@@ -154,16 +163,79 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(558, 98);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 467);
+            this.panel3.Size = new System.Drawing.Size(5, 504);
             this.panel3.TabIndex = 3;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.dtgRecords2);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(563, 98);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(623, 209);
+            this.panel4.TabIndex = 4;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.btnEditInvoice);
+            this.panel5.Controls.Add(this.btnShowInvoices);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(563, 307);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(623, 56);
+            this.panel5.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.label2.Location = new System.Drawing.Point(6, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "History";
+            // 
+            // btnShowInvoices
+            // 
+            this.btnShowInvoices.Location = new System.Drawing.Point(97, 16);
+            this.btnShowInvoices.Name = "btnShowInvoices";
+            this.btnShowInvoices.Size = new System.Drawing.Size(87, 26);
+            this.btnShowInvoices.TabIndex = 7;
+            this.btnShowInvoices.Text = "Show";
+            this.btnShowInvoices.UseVisualStyleBackColor = true;
+            this.btnShowInvoices.Click += new System.EventHandler(this.btnShowInvoices_Click);
+            // 
+            // dtgRecords3
+            // 
+            this.dtgRecords3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgRecords3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgRecords3.Location = new System.Drawing.Point(563, 363);
+            this.dtgRecords3.Name = "dtgRecords3";
+            this.dtgRecords3.ReadOnly = true;
+            this.dtgRecords3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgRecords3.Size = new System.Drawing.Size(623, 239);
+            this.dtgRecords3.TabIndex = 7;
+            // 
+            // btnEditInvoice
+            // 
+            this.btnEditInvoice.Location = new System.Drawing.Point(190, 16);
+            this.btnEditInvoice.Name = "btnEditInvoice";
+            this.btnEditInvoice.Size = new System.Drawing.Size(87, 26);
+            this.btnEditInvoice.TabIndex = 7;
+            this.btnEditInvoice.Text = "Edit";
+            this.btnEditInvoice.UseVisualStyleBackColor = true;
+            this.btnEditInvoice.Click += new System.EventHandler(this.btnEditInvoice_Click);
             // 
             // BillingUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1158, 565);
+            this.ClientSize = new System.Drawing.Size(1186, 602);
+            this.Controls.Add(this.dtgRecords3);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.dtgRecords2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "BillingUI";
@@ -176,6 +248,10 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgRecords)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgRecords2)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgRecords3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -193,5 +269,11 @@
         private System.Windows.Forms.DataGridView dtgRecords;
         private System.Windows.Forms.DataGridView dtgRecords2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnShowInvoices;
+        private System.Windows.Forms.DataGridView dtgRecords3;
+        private System.Windows.Forms.Button btnEditInvoice;
     }
 }
