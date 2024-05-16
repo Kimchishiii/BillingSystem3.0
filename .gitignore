@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/BillingSystem3.0/dbServer.cs
+/BillingSystem3.0/dbServer.cs
