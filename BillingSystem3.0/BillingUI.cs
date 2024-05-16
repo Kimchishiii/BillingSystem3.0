@@ -150,26 +150,25 @@ namespace BillingSystem3._0
         {
             if (dtgRecords.CurrentRow == null) return;
             selectedHomeOwnerId = dtgRecords.SelectedRows[0].Cells["HomeOwnerId"].Value.ToString();
-
             MergeData();
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Billings data = GetData();
-            Homeowners_Save displayUpdateHomeownerForm = new Homeowners_Save(data);
-            displayUpdateHomeownerForm.ShowDialog();
+            Invoices data = GetData();
+            AddBillingUI display = new AddBillingUI(data,"save");
+            display.ShowDialog();
         }
 
-        private Billings GetData()
+        private Invoices GetData()
         {
             DataGridViewRow selectedRow = dtgRecords.CurrentRow;
-            return new Billings
+            return new Invoices
             {
                 HomeOwnerId = Convert.ToInt32(selectedRow.Cells["HomeOwnerId"].Value),
                 FullName = selectedRow.Cells["FullName"].Value.ToString(),
-                TotalAmount = Convert.ToDecimal(selectedRow.Cells["TotalAmount"].Value),
+                NetAmount = Convert.ToDecimal(selectedRow.Cells["TotalAmount"].Value),
             };
         }
 

@@ -40,5 +40,10 @@ namespace BillingSystem3._0
                 CurrentReading = Convert.ToDecimal(txtCurrentReading.Text)
             };
         }
+
+        private void EditReadingUI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
