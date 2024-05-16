@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(388, 450);
             this.Name = "AddBillingUI";
             this.Text = "AddBillingUI";
+            this.Load += new System.EventHandler(this.AddBillingUI_Load);
             this.ResumeLayout(false);
 
         }

@@ -16,5 +16,10 @@ namespace BillingSystem3._0
         {
             InitializeComponent();
         }
+
+        private void AddBillingUI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
