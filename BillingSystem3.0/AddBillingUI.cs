@@ -73,7 +73,7 @@ namespace BillingSystem3._0
             string msg = "Saved";
             if (btnSave.Text == "Save")
             {
-                query = $"insert into Invoices (TransDate,HomeOwnerId,FullName,GrossAmount,Deductions,NetAmount,Created_at,Remarks) VALUES(" +
+                query = $"insert into Invoices (TransDate,HomeOwnerId,FullName,GrossAmount,Deductions,NetAmount,Created_at,Remarks,PaymentStatus) VALUES(" +
                     $"@TransDate," +
                     $"@HomeOwnerId," +
                     $"@FullName," +
@@ -81,7 +81,8 @@ namespace BillingSystem3._0
                     $"@Deductions," +
                     $"@NetAmount," +
                     $"@Created_at," +
-                    $"@Remarks" +
+                    $"@Remarks, " +
+                    $"'unpaid'" +
                     $") SELECT SCOPE_IDENTITY()";
             }
             else
@@ -95,7 +96,7 @@ namespace BillingSystem3._0
                     $"Deductions=@Deductions," +
                     $"NetAmount=@NetAmount," +
                     $"Created_at=@Created_at," +
-                    $"Remarks=@Remarks " +
+                    $"Remarks=@Remarks" +
                     $"where InvoiceId='{invoice.InvoiceId}'";
             }
             cmd.CommandText = query;

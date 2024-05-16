@@ -17,6 +17,7 @@ namespace BillingSystem3._0.Models
         decimal netAmount;
         string remarks;
         DateTime created_at;
+        string paymentStatus;
 
         public int InvoiceId { get => invoiceId; set => invoiceId = value; }
         public DateTime TransDate { get => transDate; set => transDate = value; }
@@ -27,5 +28,6 @@ namespace BillingSystem3._0.Models
         public decimal NetAmount { get => netAmount; set => netAmount = value; }
         public string Remarks { get => remarks; set => remarks = value; }
         public DateTime Created_at { get => created_at; set => created_at = value; }
+        public string PaymentStatus { get => paymentStatus; set => paymentStatus = value; }
     }
 }

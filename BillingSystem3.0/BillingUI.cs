@@ -85,10 +85,14 @@ namespace BillingSystem3._0
                     }
                 }
             }
+
+            var filteredReadings = readings.Where(r => r.TotalAmount != 0).ToList();
+
+            dtgRecords.DataSource = filteredReadings;
         }
         public void FetchGarbageCollections()
         {
-            string selectquery = "select HomeOwnerId, FullName, DATEDIFF(MONTH, LastCollected, GETDATE()) AS MonthsDue,(DATEDIFF(MONTH, LastCollected, GETDATE()) * GarbageCollectionFee) AS TotalAmount from HomeOwners WHERE (DATEDIFF(MONTH, LastCollected, GETDATE()) * GarbageCollectionFee) != 0";
+            string selectquery = "select HomeOwnerId, FullName, DATEDIFF(MONTH, LastCollected, GETDATE()) AS MonthsDue,(DATEDIFF(MONTH, LastCollected, GETDATE()) * GarbageCollectionFee) AS TotalAmount from HomeOwners";
             SqlDataAdapter adpt = new SqlDataAdapter(selectquery, conn);
             DataTable table = new DataTable();
             adpt.Fill(table);
@@ -109,7 +113,6 @@ namespace BillingSystem3._0
                 reading.TotalAmount = 0;
                 readings.Add(reading);
             }
-            dtgRecords.DataSource = readings;
             dtgRecords.ClearSelection();
             //dtgRecords.DataSource = garbageCollections;
             LimitDataGridView();
@@ -195,6 +198,7 @@ namespace BillingSystem3._0
                 invoice.Deductions = Convert.ToDecimal(table.Rows[i]["Deductions"]);
                 invoice.NetAmount = Convert.ToDecimal(table.Rows[i]["NetAmount"]);
                 invoice.Remarks = Convert.ToString(table.Rows[i]["Remarks"]);
+                invoice.PaymentStatus = Convert.ToString(table.Rows[i]["PaymentStatus"]);
                 invoice.Created_at = Convert.ToDateTime(table.Rows[i]["Created_at"]);
                 invoices.Add(invoice);
             }
