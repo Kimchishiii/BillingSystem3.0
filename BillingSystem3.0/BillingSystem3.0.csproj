@@ -102,6 +102,7 @@
       <DependentUpon>Homeowners_Save.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Billings.cs" />
+    <Compile Include="Models\Collections.cs" />
     <Compile Include="Models\GarbageCollections.cs" />
     <Compile Include="Models\GenerateReading.cs" />
     <Compile Include="Models\HomeOwners.cs" />

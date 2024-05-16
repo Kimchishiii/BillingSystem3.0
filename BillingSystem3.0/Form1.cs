@@ -47,5 +47,13 @@ namespace BillingSystem3._0
             mdiChild.MdiParent = this;
             mdiChild.Show();
         }
+
+        private void collectionsBTN_Click(object sender, EventArgs e)
+        {
+            CloseCurrentForms();
+            CollectionsUI mdiChild = new CollectionsUI();
+            mdiChild.MdiParent = this;
+            mdiChild.Show();
+        }
     }
 }

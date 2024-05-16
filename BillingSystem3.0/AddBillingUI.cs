@@ -96,7 +96,7 @@ namespace BillingSystem3._0
                     $"Deductions=@Deductions," +
                     $"NetAmount=@NetAmount," +
                     $"Created_at=@Created_at," +
-                    $"Remarks=@Remarks" +
+                    $"Remarks=@Remarks " +
                     $"where InvoiceId='{invoice.InvoiceId}'";
             }
             cmd.CommandText = query;
