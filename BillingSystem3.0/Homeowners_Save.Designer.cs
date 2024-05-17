@@ -75,9 +75,9 @@
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(53, 544);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox2.Size = new System.Drawing.Size(667, 175);
             this.groupBox2.TabIndex = 42;
             this.groupBox2.TabStop = false;
@@ -88,7 +88,7 @@
             this.dtLastCollected.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtLastCollected.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtLastCollected.Location = new System.Drawing.Point(175, 44);
-            this.dtLastCollected.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dtLastCollected.Margin = new System.Windows.Forms.Padding(5);
             this.dtLastCollected.Name = "dtLastCollected";
             this.dtLastCollected.Size = new System.Drawing.Size(463, 27);
             this.dtLastCollected.TabIndex = 22;
@@ -97,7 +97,7 @@
             // 
             this.txtGarbageCollectionFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGarbageCollectionFee.Location = new System.Drawing.Point(175, 84);
-            this.txtGarbageCollectionFee.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtGarbageCollectionFee.Margin = new System.Windows.Forms.Padding(5);
             this.txtGarbageCollectionFee.Name = "txtGarbageCollectionFee";
             this.txtGarbageCollectionFee.Size = new System.Drawing.Size(463, 27);
             this.txtGarbageCollectionFee.TabIndex = 15;
@@ -128,10 +128,10 @@
             this.cboGarbageCollectionStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGarbageCollectionStatus.FormattingEnabled = true;
             this.cboGarbageCollectionStatus.Items.AddRange(new object[] {
-            "resumed",
-            "suspended"});
+            "RESUMED",
+            "SUSPENDED"});
             this.cboGarbageCollectionStatus.Location = new System.Drawing.Point(175, 127);
-            this.cboGarbageCollectionStatus.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cboGarbageCollectionStatus.Margin = new System.Windows.Forms.Padding(5);
             this.cboGarbageCollectionStatus.Name = "cboGarbageCollectionStatus";
             this.cboGarbageCollectionStatus.Size = new System.Drawing.Size(464, 28);
             this.cboGarbageCollectionStatus.TabIndex = 21;
@@ -157,9 +157,9 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(53, 354);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
             this.groupBox1.Size = new System.Drawing.Size(667, 180);
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
@@ -170,7 +170,7 @@
             this.dtLastReading.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtLastReading.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtLastReading.Location = new System.Drawing.Point(175, 44);
-            this.dtLastReading.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dtLastReading.Margin = new System.Windows.Forms.Padding(5);
             this.dtLastReading.Name = "dtLastReading";
             this.dtLastReading.Size = new System.Drawing.Size(463, 27);
             this.dtLastReading.TabIndex = 22;
@@ -179,7 +179,7 @@
             // 
             this.txtPreviousReading.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPreviousReading.Location = new System.Drawing.Point(175, 84);
-            this.txtPreviousReading.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPreviousReading.Margin = new System.Windows.Forms.Padding(5);
             this.txtPreviousReading.Name = "txtPreviousReading";
             this.txtPreviousReading.Size = new System.Drawing.Size(463, 27);
             this.txtPreviousReading.TabIndex = 15;
@@ -200,10 +200,11 @@
             this.cboWaterServiceStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboWaterServiceStatus.FormattingEnabled = true;
             this.cboWaterServiceStatus.Items.AddRange(new object[] {
-            "connected",
-            "disconnected"});
+            "PLEASE PAY YOUR BILLS ON TIME",
+            "NOTICE FOR DISCONNECTION",
+            "DISCONNECTED"});
             this.cboWaterServiceStatus.Location = new System.Drawing.Point(175, 126);
-            this.cboWaterServiceStatus.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cboWaterServiceStatus.Margin = new System.Windows.Forms.Padding(5);
             this.cboWaterServiceStatus.Name = "cboWaterServiceStatus";
             this.cboWaterServiceStatus.Size = new System.Drawing.Size(464, 28);
             this.cboWaterServiceStatus.TabIndex = 21;
@@ -232,7 +233,7 @@
             // 
             this.dtMoveInDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtMoveInDate.Location = new System.Drawing.Point(227, 315);
-            this.dtMoveInDate.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dtMoveInDate.Margin = new System.Windows.Forms.Padding(5);
             this.dtMoveInDate.Name = "dtMoveInDate";
             this.dtMoveInDate.Size = new System.Drawing.Size(464, 27);
             this.dtMoveInDate.TabIndex = 40;
@@ -246,7 +247,7 @@
             "Phase II",
             "Phase I"});
             this.cbPhaseName.Location = new System.Drawing.Point(228, 204);
-            this.cbPhaseName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cbPhaseName.Margin = new System.Windows.Forms.Padding(5);
             this.cbPhaseName.Name = "cbPhaseName";
             this.cbPhaseName.Size = new System.Drawing.Size(188, 28);
             this.cbPhaseName.TabIndex = 39;
@@ -275,7 +276,7 @@
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(226, 278);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(464, 27);
             this.txtEmail.TabIndex = 36;
@@ -294,7 +295,7 @@
             // 
             this.txtContactNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContactNo.Location = new System.Drawing.Point(226, 241);
-            this.txtContactNo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtContactNo.Margin = new System.Windows.Forms.Padding(5);
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Size = new System.Drawing.Size(464, 27);
             this.txtContactNo.TabIndex = 34;
@@ -313,7 +314,7 @@
             // 
             this.txtLot.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLot.Location = new System.Drawing.Point(615, 204);
-            this.txtLot.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtLot.Margin = new System.Windows.Forms.Padding(5);
             this.txtLot.Name = "txtLot";
             this.txtLot.Size = new System.Drawing.Size(75, 27);
             this.txtLot.TabIndex = 32;
@@ -332,7 +333,7 @@
             // 
             this.txtBlock.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBlock.Location = new System.Drawing.Point(497, 204);
-            this.txtBlock.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtBlock.Margin = new System.Windows.Forms.Padding(5);
             this.txtBlock.Name = "txtBlock";
             this.txtBlock.Size = new System.Drawing.Size(70, 27);
             this.txtBlock.TabIndex = 30;
@@ -361,7 +362,7 @@
             // 
             this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.Location = new System.Drawing.Point(228, 167);
-            this.txtFullName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtFullName.Margin = new System.Windows.Forms.Padding(5);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(462, 27);
             this.txtFullName.TabIndex = 27;
@@ -383,7 +384,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(53, 739);
-            this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(667, 46);
             this.button3.TabIndex = 25;
@@ -396,7 +397,7 @@
             this.txtGenerateId.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtGenerateId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGenerateId.Location = new System.Drawing.Point(228, 130);
-            this.txtGenerateId.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtGenerateId.Margin = new System.Windows.Forms.Padding(5);
             this.txtGenerateId.Name = "txtGenerateId";
             this.txtGenerateId.ReadOnly = true;
             this.txtGenerateId.Size = new System.Drawing.Size(180, 27);
@@ -409,7 +410,7 @@
             this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(123, 53);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(531, 37);
+            this.label15.Size = new System.Drawing.Size(519, 37);
             this.label15.TabIndex = 43;
             this.label15.Text = "Homeowner\'s Account Information";
             // 
@@ -439,7 +440,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.txtGenerateId);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Homeowners_Save";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Homeowners_Save";
