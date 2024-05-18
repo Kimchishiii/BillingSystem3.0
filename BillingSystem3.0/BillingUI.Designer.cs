@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.selectAll_checkbx = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -46,6 +45,7 @@
             this.btnShowInvoices = new System.Windows.Forms.Button();
             this.dtgRecords3 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgRecords)).BeginInit();
@@ -60,7 +60,6 @@
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.selectAll_checkbx);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.textBox1);
@@ -82,17 +81,6 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Search:";
             // 
-            // selectAll_checkbx
-            // 
-            this.selectAll_checkbx.AutoSize = true;
-            this.selectAll_checkbx.Location = new System.Drawing.Point(671, 92);
-            this.selectAll_checkbx.Margin = new System.Windows.Forms.Padding(4);
-            this.selectAll_checkbx.Name = "selectAll_checkbx";
-            this.selectAll_checkbx.Size = new System.Drawing.Size(85, 20);
-            this.selectAll_checkbx.TabIndex = 10;
-            this.selectAll_checkbx.Text = "Select All";
-            this.selectAll_checkbx.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Gold;
@@ -105,6 +93,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Print Invoice";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -284,6 +273,10 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // BillingUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -318,7 +311,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox selectAll_checkbx;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
@@ -334,5 +326,6 @@
         private System.Windows.Forms.DataGridView dtgRecords3;
         private System.Windows.Forms.Button btnEditInvoice;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }

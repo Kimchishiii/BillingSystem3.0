@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -261,5 +262,59 @@ namespace BillingSystem3._0
                 AddTotals();
             }
         }
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            // Set up print document properties
+            Graphics graphics = e.Graphics;
+            Font titleFont = new Font("Arial", 16, FontStyle.Bold);
+            Font infoFont = new Font("Arial", 12);
+            float fontHeight = titleFont.GetHeight();
+            int startX = 10;
+            int startY = 10;
+            int offset = 40;
+
+            // Print the title
+            string title = "HANIYYAH HOMES SUBDIVISION PHASE 2 BILLING SYSTEM";
+            graphics.DrawString(title, titleFont, new SolidBrush(Color.Black), startX, startY);
+
+            // Print additional information
+            string additionalInfo = $"Printed on: {DateTime.Now}";
+            graphics.DrawString(additionalInfo, infoFont, new SolidBrush(Color.Black), startX, startY + offset);
+            offset += (int)fontHeight + 5;
+
+            // Print each record in the DataGridView
+            foreach (var detail in fdetails)
+            {
+                string text = $"HomeOwnerId: {detail.HomeOwnerId}, FullName: {detail.FullName}, Type: {detail.Type}, TotalAmount: {detail.TotalAmount}";
+                graphics.DrawString(text, infoFont, new SolidBrush(Color.Black), startX, startY + offset);
+                offset += (int)fontHeight + 5;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Check if there are any data to print
+            if (fdetails == null || fdetails.Count == 0)
+            {
+                MessageBox.Show("No data to print.", "Empty Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Display print dialog
+            PrintDialog printDialog = new PrintDialog();
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Create print document
+                PrintDocument printDocument = new PrintDocument();
+                printDocument.PrintPage += PrintDocument_PrintPage;
+
+                // Set printer name
+                printDocument.PrinterSettings.PrinterName = printDialog.PrinterSettings.PrinterName;
+
+                // Start printing
+                printDocument.Print();
+            }
+        }
+
     }
 }

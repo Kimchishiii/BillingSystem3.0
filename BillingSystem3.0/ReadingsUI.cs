@@ -188,5 +188,44 @@ namespace BillingSystem3._0
                 CurrentReading = Convert.ToDecimal(selectedRow.Cells["CurrentReading"].Value),
             };
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Get the search text from the textbox
+            string searchText = textBox1.Text.Trim();
+
+            // Check if the search text is empty
+            if (string.IsNullOrEmpty(searchText))
+            {
+                MessageBox.Show("Please enter a search term.", "Empty Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Check if the generateReadings list is null or empty
+            if (generateReadings == null || generateReadings.Count == 0)
+            {
+                MessageBox.Show("No data to search. Please fetch data first.", "Empty Data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Perform the search operation
+            var filteredList = generateReadings.Where(r => r.FullName != null && r.FullName.ToLower().Contains(searchText.ToLower())).ToList();
+
+            // Check if any items match the search criteria
+            if (filteredList.Count == 0)
+            {
+                MessageBox.Show("No matching records found.", "No Matches", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Display the filtered list in the DataGridView
+                dtgRecords.DataSource = filteredList;
+            }
+        }
     }
 }
