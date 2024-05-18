@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.btnAddCollection = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,12 +40,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dtgRecords = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnViewCollections = new System.Windows.Forms.Button();
             this.dtgRecords2 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -55,6 +59,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.btnAddCollection);
@@ -63,10 +68,42 @@
             this.panel1.Controls.Add(this.search_textbox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1275, 97);
             this.panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gold;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Ivory;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1056, 29);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 48);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Delete Collection";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Gold;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Ivory;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(898, 29);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(150, 48);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Edit Collection";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnAddCollection
             // 
@@ -75,7 +112,7 @@
             this.btnAddCollection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCollection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCollection.Location = new System.Drawing.Point(723, 29);
-            this.btnAddCollection.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddCollection.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddCollection.Name = "btnAddCollection";
             this.btnAddCollection.Size = new System.Drawing.Size(167, 48);
             this.btnAddCollection.TabIndex = 5;
@@ -88,12 +125,12 @@
             this.btnView.BackColor = System.Drawing.Color.White;
             this.btnView.FlatAppearance.BorderSize = 0;
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnView.Location = new System.Drawing.Point(505, 39);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnView.Location = new System.Drawing.Point(584, 40);
+            this.btnView.Margin = new System.Windows.Forms.Padding(4);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(81, 27);
             this.btnView.TabIndex = 4;
-            this.btnView.Text = "view";
+            this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = false;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
@@ -112,10 +149,11 @@
             // 
             this.search_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.search_textbox.Location = new System.Drawing.Point(109, 40);
-            this.search_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.search_textbox.Margin = new System.Windows.Forms.Padding(4);
             this.search_textbox.Name = "search_textbox";
             this.search_textbox.Size = new System.Drawing.Size(377, 27);
             this.search_textbox.TabIndex = 0;
+            this.search_textbox.TextChanged += new System.EventHandler(this.search_textbox_TextChanged);
             // 
             // panel2
             // 
@@ -123,7 +161,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 97);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1275, 55);
             this.panel2.TabIndex = 2;
@@ -144,7 +182,7 @@
             this.panel3.Controls.Add(this.dtgRecords);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 152);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1275, 321);
             this.panel3.TabIndex = 3;
@@ -156,7 +194,7 @@
             this.dtgRecords.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgRecords.GridColor = System.Drawing.Color.White;
             this.dtgRecords.Location = new System.Drawing.Point(0, 0);
-            this.dtgRecords.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgRecords.Margin = new System.Windows.Forms.Padding(4);
             this.dtgRecords.Name = "dtgRecords";
             this.dtgRecords.ReadOnly = true;
             this.dtgRecords.RowHeadersWidth = 51;
@@ -167,15 +205,34 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.textBox1);
             this.panel4.Controls.Add(this.button5);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.btnViewCollections);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 473);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1275, 66);
             this.panel4.TabIndex = 4;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Ivory;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(979, 20);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(95, 27);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Delete";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label3
             // 
@@ -190,16 +247,16 @@
             // 
             // btnViewCollections
             // 
-            this.btnViewCollections.BackColor = System.Drawing.Color.Gold;
+            this.btnViewCollections.BackColor = System.Drawing.Color.White;
             this.btnViewCollections.FlatAppearance.BorderSize = 0;
             this.btnViewCollections.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewCollections.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewCollections.Location = new System.Drawing.Point(360, 10);
-            this.btnViewCollections.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnViewCollections.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewCollections.Location = new System.Drawing.Point(881, 20);
+            this.btnViewCollections.Margin = new System.Windows.Forms.Padding(4);
             this.btnViewCollections.Name = "btnViewCollections";
-            this.btnViewCollections.Size = new System.Drawing.Size(126, 48);
+            this.btnViewCollections.Size = new System.Drawing.Size(90, 27);
             this.btnViewCollections.TabIndex = 4;
-            this.btnViewCollections.Text = "view";
+            this.btnViewCollections.Text = "View";
             this.btnViewCollections.UseVisualStyleBackColor = false;
             this.btnViewCollections.Click += new System.EventHandler(this.btnViewCollections_Click);
             // 
@@ -210,7 +267,7 @@
             this.dtgRecords2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgRecords2.GridColor = System.Drawing.Color.White;
             this.dtgRecords2.Location = new System.Drawing.Point(0, 539);
-            this.dtgRecords2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgRecords2.Margin = new System.Windows.Forms.Padding(4);
             this.dtgRecords2.Name = "dtgRecords2";
             this.dtgRecords2.ReadOnly = true;
             this.dtgRecords2.RowHeadersWidth = 51;
@@ -218,53 +275,54 @@
             this.dtgRecords2.Size = new System.Drawing.Size(1275, 439);
             this.dtgRecords2.TabIndex = 5;
             // 
-            // button3
+            // button2
             // 
-            this.button3.BackColor = System.Drawing.Color.Gold;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Ivory;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(898, 29);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 48);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Edit Collection";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(495, 40);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(81, 27);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Search";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button5
+            // button4
             // 
-            this.button5.BackColor = System.Drawing.Color.Gold;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Ivory;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(505, 10);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(131, 48);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Delete";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(792, 20);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(81, 27);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Search";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button1
+            // label4
             // 
-            this.button1.BackColor = System.Drawing.Color.Gold;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Ivory;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1056, 29);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 48);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Delete Collection";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(316, 21);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 20);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Search:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(406, 20);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(377, 27);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // CollectionsUI
             // 
@@ -276,7 +334,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CollectionsUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CollectionsUI";
@@ -313,5 +371,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

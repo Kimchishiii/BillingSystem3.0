@@ -36,6 +36,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
             this.dtgRecords = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgRecords)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +44,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button5);
@@ -51,7 +53,7 @@
             this.panel1.Controls.Add(this.btnView);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1369, 93);
             this.panel1.TabIndex = 1;
@@ -72,10 +74,11 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(150, 34);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(420, 30);
             this.textBox1.TabIndex = 4;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button5
             // 
@@ -85,7 +88,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(1176, 21);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(132, 51);
             this.button5.TabIndex = 3;
@@ -101,7 +104,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(1022, 21);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(136, 51);
             this.button3.TabIndex = 2;
@@ -117,7 +120,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(875, 21);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(128, 51);
             this.button2.TabIndex = 1;
@@ -130,10 +133,10 @@
             this.btnView.BackColor = System.Drawing.Color.White;
             this.btnView.FlatAppearance.BorderSize = 0;
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnView.Location = new System.Drawing.Point(590, 34);
-            this.btnView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnView.Location = new System.Drawing.Point(683, 34);
+            this.btnView.Margin = new System.Windows.Forms.Padding(4);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(123, 30);
+            this.btnView.Size = new System.Drawing.Size(106, 30);
             this.btnView.TabIndex = 0;
             this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = false;
@@ -147,13 +150,27 @@
             this.dtgRecords.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgRecords.GridColor = System.Drawing.Color.White;
             this.dtgRecords.Location = new System.Drawing.Point(0, 93);
-            this.dtgRecords.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgRecords.Margin = new System.Windows.Forms.Padding(4);
             this.dtgRecords.Name = "dtgRecords";
             this.dtgRecords.ReadOnly = true;
             this.dtgRecords.RowHeadersWidth = 51;
             this.dtgRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgRecords.Size = new System.Drawing.Size(1369, 679);
             this.dtgRecords.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(578, 34);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 30);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // HomeownersUI
             // 
@@ -162,7 +179,7 @@
             this.ClientSize = new System.Drawing.Size(1369, 772);
             this.Controls.Add(this.dtgRecords);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomeownersUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeownersUI";
@@ -185,5 +202,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dtgRecords;
+        private System.Windows.Forms.Button button1;
     }
 }

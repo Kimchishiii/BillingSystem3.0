@@ -45,6 +45,7 @@
             this.btnEditInvoice = new System.Windows.Forms.Button();
             this.btnShowInvoices = new System.Windows.Forms.Button();
             this.dtgRecords3 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgRecords)).BeginInit();
@@ -57,6 +58,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.selectAll_checkbx);
             this.panel1.Controls.Add(this.button2);
@@ -65,7 +67,7 @@
             this.panel1.Controls.Add(this.btnShow);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1581, 121);
             this.panel1.TabIndex = 0;
@@ -84,7 +86,7 @@
             // 
             this.selectAll_checkbx.AutoSize = true;
             this.selectAll_checkbx.Location = new System.Drawing.Point(671, 92);
-            this.selectAll_checkbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.selectAll_checkbx.Margin = new System.Windows.Forms.Padding(4);
             this.selectAll_checkbx.Name = "selectAll_checkbx";
             this.selectAll_checkbx.Size = new System.Drawing.Size(85, 20);
             this.selectAll_checkbx.TabIndex = 10;
@@ -97,7 +99,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(1089, 33);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(160, 50);
             this.button2.TabIndex = 6;
@@ -110,7 +112,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(909, 33);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(159, 50);
             this.button3.TabIndex = 9;
@@ -122,22 +124,23 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(100, 43);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(431, 30);
             this.textBox1.TabIndex = 8;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnShow
             // 
             this.btnShow.BackColor = System.Drawing.Color.White;
             this.btnShow.FlatAppearance.BorderSize = 0;
             this.btnShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShow.Location = new System.Drawing.Point(539, 43);
-            this.btnShow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShow.Location = new System.Drawing.Point(651, 43);
+            this.btnShow.Margin = new System.Windows.Forms.Padding(4);
             this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(116, 30);
+            this.btnShow.Size = new System.Drawing.Size(105, 30);
             this.btnShow.TabIndex = 7;
-            this.btnShow.Text = "Show";
+            this.btnShow.Text = "View";
             this.btnShow.UseVisualStyleBackColor = false;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
@@ -146,7 +149,7 @@
             this.panel2.Controls.Add(this.dtgRecords);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 121);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(744, 620);
             this.panel2.TabIndex = 1;
@@ -158,7 +161,7 @@
             this.dtgRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgRecords.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgRecords.Location = new System.Drawing.Point(0, 0);
-            this.dtgRecords.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgRecords.Margin = new System.Windows.Forms.Padding(4);
             this.dtgRecords.Name = "dtgRecords";
             this.dtgRecords.ReadOnly = true;
             this.dtgRecords.RowHeadersWidth = 51;
@@ -174,7 +177,7 @@
             this.dtgRecords2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgRecords2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgRecords2.Location = new System.Drawing.Point(0, 0);
-            this.dtgRecords2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgRecords2.Margin = new System.Windows.Forms.Padding(4);
             this.dtgRecords2.Name = "dtgRecords2";
             this.dtgRecords2.ReadOnly = true;
             this.dtgRecords2.RowHeadersWidth = 51;
@@ -186,7 +189,7 @@
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(744, 121);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(7, 620);
             this.panel3.TabIndex = 3;
@@ -196,7 +199,7 @@
             this.panel4.Controls.Add(this.dtgRecords2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(751, 121);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(830, 257);
             this.panel4.TabIndex = 4;
@@ -209,7 +212,7 @@
             this.panel5.Controls.Add(this.btnShowInvoices);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(751, 378);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(830, 69);
             this.panel5.TabIndex = 6;
@@ -231,7 +234,7 @@
             this.btnEditInvoice.FlatAppearance.BorderSize = 0;
             this.btnEditInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditInvoice.Location = new System.Drawing.Point(338, 20);
-            this.btnEditInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditInvoice.Name = "btnEditInvoice";
             this.btnEditInvoice.Size = new System.Drawing.Size(160, 32);
             this.btnEditInvoice.TabIndex = 7;
@@ -245,7 +248,7 @@
             this.btnShowInvoices.FlatAppearance.BorderSize = 0;
             this.btnShowInvoices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowInvoices.Location = new System.Drawing.Point(158, 20);
-            this.btnShowInvoices.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShowInvoices.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowInvoices.Name = "btnShowInvoices";
             this.btnShowInvoices.Size = new System.Drawing.Size(159, 32);
             this.btnShowInvoices.TabIndex = 7;
@@ -259,13 +262,27 @@
             this.dtgRecords3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgRecords3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgRecords3.Location = new System.Drawing.Point(751, 447);
-            this.dtgRecords3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgRecords3.Margin = new System.Windows.Forms.Padding(4);
             this.dtgRecords3.Name = "dtgRecords3";
             this.dtgRecords3.ReadOnly = true;
             this.dtgRecords3.RowHeadersWidth = 51;
             this.dtgRecords3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgRecords3.Size = new System.Drawing.Size(830, 294);
             this.dtgRecords3.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(539, 43);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 30);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BillingUI
             // 
@@ -278,7 +295,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BillingUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BillingUI";
@@ -316,5 +333,6 @@
         private System.Windows.Forms.Button btnShowInvoices;
         private System.Windows.Forms.DataGridView dtgRecords3;
         private System.Windows.Forms.Button btnEditInvoice;
+        private System.Windows.Forms.Button button1;
     }
 }

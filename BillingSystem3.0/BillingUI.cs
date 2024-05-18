@@ -233,5 +233,33 @@ namespace BillingSystem3._0
                 Remarks = selectedRow.Cells["Remarks"].Value.ToString(),
             };
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button1.Click += button1_Click;
+
+            string searchText = textBox1.Text.Trim();
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                // Filter the readings list based on the entered name
+                var filteredList = readings.Where(r => r.FullName.ToLower().Contains(searchText.ToLower())).ToList();
+                dtgRecords.DataSource = filteredList;
+
+                if (filteredList.Count == 0)
+                {
+                    MessageBox.Show("No homeowner found with the entered name.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                // If search text is empty, show all readings
+                AddTotals();
+            }
+        }
     }
 }

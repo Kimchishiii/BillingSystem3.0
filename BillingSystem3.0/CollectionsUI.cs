@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BillingSystem3._0
@@ -228,6 +229,84 @@ namespace BillingSystem3._0
                 DeleteInvoice(selectedInvoice);
                 FetchInvoices();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Get the search text from the textbox
+            string searchText = search_textbox.Text.Trim();
+
+            // Check if the search text is empty
+            if (string.IsNullOrEmpty(searchText))
+            {
+                MessageBox.Show("Please enter a search term.", "Empty Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Check if the invoices list is null or empty
+            if (invoices == null || invoices.Count == 0)
+            {
+                MessageBox.Show("No data to search. Please fetch invoices first.", "Empty Invoices", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Perform the search operation
+            var filteredList = invoices.Where(i => i.FullName != null && i.FullName.ToLower().Contains(searchText.ToLower())).ToList();
+
+            // Check if any items match the search criteria
+            if (filteredList.Count == 0)
+            {
+                MessageBox.Show("No matching records found.", "No Matches", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Display the filtered list in the DataGridView
+                dtgRecords.DataSource = filteredList;
+            }
+        }
+
+        private void search_textbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Get the search text from the textbox
+            string searchText = textBox1.Text.Trim();
+
+            // Check if the search text is empty
+            if (string.IsNullOrEmpty(searchText))
+            {
+                MessageBox.Show("Please enter a search term.", "Empty Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Check if the collections list is null or empty
+            if (collections == null || collections.Count == 0)
+            {
+                MessageBox.Show("No data to search. Please fetch collections first.", "Empty Collections", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Perform the search operation
+            var filteredList = collections.Where(c => c.FullName != null && c.FullName.ToLower().Contains(searchText.ToLower())).ToList();
+
+            // Check if any items match the search criteria
+            if (filteredList.Count == 0)
+            {
+                MessageBox.Show("No matching records found.", "No Matches", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Display the filtered list in the DataGridView
+                dtgRecords2.DataSource = filteredList;
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+          
         }
     }
 }
