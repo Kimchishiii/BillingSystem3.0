@@ -56,12 +56,12 @@ namespace BillingSystem3._0
             mdiChild.Show();
         }
 
-        private void configBTN_Click(object sender, EventArgs e)
+        private void reportBTN_Click(object sender, EventArgs e)
         {
-            // Close and reopen the main form
             CloseCurrentForms();
-            var form = new Form1();
-            form.Show();
+            ReportsUI mdiChild = new ReportsUI();
+            mdiChild.MdiParent = this;
+            mdiChild.Show();
         }
     }
 }

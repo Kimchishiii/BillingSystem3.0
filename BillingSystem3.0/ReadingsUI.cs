@@ -227,5 +227,10 @@ namespace BillingSystem3._0
                 dtgRecords.DataSource = filteredList;
             }
         }
+
+        private void dtgRecords_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

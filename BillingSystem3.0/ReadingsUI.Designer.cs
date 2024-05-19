@@ -35,10 +35,10 @@
             this.btnAddReading = new System.Windows.Forms.Button();
             this.btnGenerateReading = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dtgRecords = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dtgRecords = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -137,22 +137,6 @@
             this.panel1.Size = new System.Drawing.Size(1359, 154);
             this.panel1.TabIndex = 4;
             // 
-            // dtgRecords
-            // 
-            this.dtgRecords.BackgroundColor = System.Drawing.Color.NavajoWhite;
-            this.dtgRecords.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgRecords.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgRecords.GridColor = System.Drawing.Color.White;
-            this.dtgRecords.Location = new System.Drawing.Point(0, 154);
-            this.dtgRecords.Margin = new System.Windows.Forms.Padding(4);
-            this.dtgRecords.Name = "dtgRecords";
-            this.dtgRecords.ReadOnly = true;
-            this.dtgRecords.RowHeadersWidth = 51;
-            this.dtgRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgRecords.Size = new System.Drawing.Size(1359, 594);
-            this.dtgRecords.TabIndex = 5;
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
@@ -188,6 +172,23 @@
             this.textBox1.Size = new System.Drawing.Size(364, 30);
             this.textBox1.TabIndex = 7;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // dtgRecords
+            // 
+            this.dtgRecords.BackgroundColor = System.Drawing.Color.NavajoWhite;
+            this.dtgRecords.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgRecords.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgRecords.GridColor = System.Drawing.Color.White;
+            this.dtgRecords.Location = new System.Drawing.Point(0, 154);
+            this.dtgRecords.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgRecords.Name = "dtgRecords";
+            this.dtgRecords.ReadOnly = true;
+            this.dtgRecords.RowHeadersWidth = 51;
+            this.dtgRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgRecords.Size = new System.Drawing.Size(1359, 594);
+            this.dtgRecords.TabIndex = 5;
+            this.dtgRecords.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgRecords_CellContentClick);
             // 
             // ReadingsUI
             // 

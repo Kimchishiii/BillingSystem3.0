@@ -16,5 +16,10 @@ namespace BillingSystem3._0
         {
             InitializeComponent();
         }
+
+        private void btn_ViewReport_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

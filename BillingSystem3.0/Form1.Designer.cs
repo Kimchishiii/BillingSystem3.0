@@ -33,8 +33,6 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.logopicturebox = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.configBTN = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.reportBTN = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -48,7 +46,6 @@
             this.panel1.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logopicturebox)).BeginInit();
-            this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -61,7 +58,6 @@
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.logoPanel);
-            this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
@@ -69,7 +65,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(227, 775);
             this.panel1.TabIndex = 0;
@@ -78,7 +74,7 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.Transparent;
             this.panel9.Location = new System.Drawing.Point(4, 142);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(221, 53);
             this.panel9.TabIndex = 13;
@@ -89,7 +85,7 @@
             this.logoPanel.Controls.Add(this.logopicturebox);
             this.logoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.logoPanel.Location = new System.Drawing.Point(0, 0);
-            this.logoPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logoPanel.Margin = new System.Windows.Forms.Padding(4);
             this.logoPanel.Name = "logoPanel";
             this.logoPanel.Size = new System.Drawing.Size(227, 134);
             this.logoPanel.TabIndex = 7;
@@ -101,41 +97,17 @@
             this.logopicturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.logopicturebox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.logopicturebox.Location = new System.Drawing.Point(0, 0);
-            this.logopicturebox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logopicturebox.Margin = new System.Windows.Forms.Padding(4);
             this.logopicturebox.Name = "logopicturebox";
             this.logopicturebox.Size = new System.Drawing.Size(227, 134);
             this.logopicturebox.TabIndex = 2;
             this.logopicturebox.TabStop = false;
             // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.configBTN);
-            this.panel7.Location = new System.Drawing.Point(11, 490);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(168, 52);
-            this.panel7.TabIndex = 8;
-            // 
-            // configBTN
-            // 
-            this.configBTN.BackColor = System.Drawing.Color.Transparent;
-            this.configBTN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("configBTN.BackgroundImage")));
-            this.configBTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.configBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.configBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.configBTN.Location = new System.Drawing.Point(-60, -36);
-            this.configBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.configBTN.Name = "configBTN";
-            this.configBTN.Size = new System.Drawing.Size(239, 122);
-            this.configBTN.TabIndex = 7;
-            this.configBTN.UseVisualStyleBackColor = false;
-            this.configBTN.Click += new System.EventHandler(this.configBTN_Click);
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.reportBTN);
             this.panel6.Location = new System.Drawing.Point(11, 431);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(168, 52);
             this.panel6.TabIndex = 9;
@@ -148,17 +120,18 @@
             this.reportBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reportBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.reportBTN.Location = new System.Drawing.Point(-56, -34);
-            this.reportBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reportBTN.Margin = new System.Windows.Forms.Padding(4);
             this.reportBTN.Name = "reportBTN";
             this.reportBTN.Size = new System.Drawing.Size(239, 122);
             this.reportBTN.TabIndex = 6;
             this.reportBTN.UseVisualStyleBackColor = false;
+            this.reportBTN.Click += new System.EventHandler(this.reportBTN_Click);
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.collectionsBTN);
             this.panel5.Location = new System.Drawing.Point(11, 372);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(168, 52);
             this.panel5.TabIndex = 10;
@@ -171,7 +144,7 @@
             this.collectionsBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.collectionsBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.collectionsBTN.Location = new System.Drawing.Point(-37, -33);
-            this.collectionsBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.collectionsBTN.Margin = new System.Windows.Forms.Padding(4);
             this.collectionsBTN.Name = "collectionsBTN";
             this.collectionsBTN.Size = new System.Drawing.Size(239, 122);
             this.collectionsBTN.TabIndex = 5;
@@ -182,7 +155,7 @@
             // 
             this.panel4.Controls.Add(this.ReadingsBtn);
             this.panel4.Location = new System.Drawing.Point(11, 254);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(168, 52);
             this.panel4.TabIndex = 11;
@@ -195,7 +168,7 @@
             this.ReadingsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ReadingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ReadingsBtn.Location = new System.Drawing.Point(-59, -43);
-            this.ReadingsBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ReadingsBtn.Margin = new System.Windows.Forms.Padding(4);
             this.ReadingsBtn.Name = "ReadingsBtn";
             this.ReadingsBtn.Size = new System.Drawing.Size(239, 122);
             this.ReadingsBtn.TabIndex = 4;
@@ -206,7 +179,7 @@
             // 
             this.panel3.Controls.Add(this.BillingsBTN);
             this.panel3.Location = new System.Drawing.Point(11, 313);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(168, 52);
             this.panel3.TabIndex = 12;
@@ -219,7 +192,7 @@
             this.BillingsBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BillingsBTN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BillingsBTN.Location = new System.Drawing.Point(-57, -34);
-            this.BillingsBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BillingsBTN.Margin = new System.Windows.Forms.Padding(4);
             this.BillingsBTN.Name = "BillingsBTN";
             this.BillingsBTN.Size = new System.Drawing.Size(239, 122);
             this.BillingsBTN.TabIndex = 4;
@@ -230,7 +203,7 @@
             // 
             this.panel2.Controls.Add(this.Homeownerbtn);
             this.panel2.Location = new System.Drawing.Point(11, 194);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(168, 52);
             this.panel2.TabIndex = 6;
@@ -243,7 +216,7 @@
             this.Homeownerbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Homeownerbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Homeownerbtn.Location = new System.Drawing.Point(-40, -33);
-            this.Homeownerbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Homeownerbtn.Margin = new System.Windows.Forms.Padding(4);
             this.Homeownerbtn.Name = "Homeownerbtn";
             this.Homeownerbtn.Size = new System.Drawing.Size(227, 122);
             this.Homeownerbtn.TabIndex = 3;
@@ -260,7 +233,7 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -268,7 +241,6 @@
             this.panel1.ResumeLayout(false);
             this.logoPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logopicturebox)).EndInit();
-            this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -284,8 +256,6 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel logoPanel;
         private System.Windows.Forms.PictureBox logopicturebox;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button configBTN;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button reportBTN;
         private System.Windows.Forms.Panel panel5;
