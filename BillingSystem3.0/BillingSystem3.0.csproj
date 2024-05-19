@@ -63,6 +63,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BillingSystemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BillingSystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillingSystemDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BillingSystemDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillingSystemDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BillingSystemDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillingSystemDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BillingUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +148,12 @@
     <Compile Include="ReportsUI.Designer.cs">
       <DependentUpon>ReportsUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportsUI2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportsUI2.Designer.cs">
+      <DependentUpon>ReportsUI2.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateHomeowners.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +205,9 @@
     <EmbeddedResource Include="ReportsUI.resx">
       <DependentUpon>ReportsUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportsUI2.resx">
+      <DependentUpon>ReportsUI2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateHomeowners.resx">
       <DependentUpon>UpdateHomeowners.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +221,39 @@
     </None>
     <None Include="BillingSystemDataSet.xss">
       <DependentUpon>BillingSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BillingSystemDataSet1.xsc">
+      <DependentUpon>BillingSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BillingSystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BillingSystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BillingSystemDataSet1.xss">
+      <DependentUpon>BillingSystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BillingSystemDataSet2.xsc">
+      <DependentUpon>BillingSystemDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BillingSystemDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BillingSystemDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BillingSystemDataSet2.xss">
+      <DependentUpon>BillingSystemDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BillingSystemDataSet3.xsc">
+      <DependentUpon>BillingSystemDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="BillingSystemDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BillingSystemDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BillingSystemDataSet3.xss">
+      <DependentUpon>BillingSystemDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

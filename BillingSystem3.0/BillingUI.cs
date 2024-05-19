@@ -274,22 +274,43 @@ namespace BillingSystem3._0
             int offset = 40;
 
             // Print the title
-            string title = "HANIYYAH HOMES SUBDIVISION PHASE 2 BILLING SYSTEM";
+            string title = "          HANIYYAH HOMES SUBDIVISION PHASE 2 BILLING SYSTEM";
             graphics.DrawString(title, titleFont, new SolidBrush(Color.Black), startX, startY);
 
             // Print additional information
-            string additionalInfo = $"Printed on: {DateTime.Now}";
+            string additionalInfo = $"                Bill Printed on: {DateTime.Now}";
             graphics.DrawString(additionalInfo, infoFont, new SolidBrush(Color.Black), startX, startY + offset);
             offset += (int)fontHeight + 5;
-
+            
             // Print each record in the DataGridView
             foreach (var detail in fdetails)
             {
-                string text = $"HomeOwnerId: {detail.HomeOwnerId}, FullName: {detail.FullName}, Type: {detail.Type}, TotalAmount: {detail.TotalAmount}";
+                string text = $"                FullName: {detail.FullName}, Type: {detail.Type}, TotalAmount: {detail.TotalAmount}";
                 graphics.DrawString(text, infoFont, new SolidBrush(Color.Black), startX, startY + offset);
                 offset += (int)fontHeight + 5;
             }
+
+            // Print water details
+            string waterDetails = @"
+                ---------------------------------------------------------------------------------------
+                Water Reading Meter
+                0-10        350.00        Fixed X
+                10.1-20     40.00        /cu.M.X
+                20.1-30     45.00        /cu.M.X
+                30.1-40     70.00        /cu.M.X
+                40.1-UP     80.00        /cu.M.X
+                ---------------------------------------------------------------------------------------";
+            graphics.DrawString(waterDetails, infoFont, new SolidBrush(Color.Black), startX, startY + offset);
+            offset += (int)fontHeight * 7 + 5; // Adjust offset to accommodate the water details
+
+            // Print reminders
+            string reminders = @"
+                REMINDERS:
+                1. For your queries and concerns, you may reach admin office 09618846085
+                2. Disregard this bill if payment has been made.";
+            graphics.DrawString(reminders, infoFont, new SolidBrush(Color.Black), startX, startY + offset);
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -316,5 +337,9 @@ namespace BillingSystem3._0
             }
         }
 
+        private void dtgRecords2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

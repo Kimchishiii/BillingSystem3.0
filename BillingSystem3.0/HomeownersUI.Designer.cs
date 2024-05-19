@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
@@ -36,7 +37,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
             this.dtgRecords = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgRecords)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +57,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1369, 93);
             this.panel1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(578, 34);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 30);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -138,7 +152,7 @@
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(106, 30);
             this.btnView.TabIndex = 0;
-            this.btnView.Text = "View";
+            this.btnView.Text = "View All";
             this.btnView.UseVisualStyleBackColor = false;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
@@ -157,20 +171,6 @@
             this.dtgRecords.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgRecords.Size = new System.Drawing.Size(1369, 679);
             this.dtgRecords.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(578, 34);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 30);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // HomeownersUI
             // 

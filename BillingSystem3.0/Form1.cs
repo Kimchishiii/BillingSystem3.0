@@ -59,7 +59,7 @@ namespace BillingSystem3._0
         private void reportBTN_Click(object sender, EventArgs e)
         {
             CloseCurrentForms();
-            ReportsUI mdiChild = new ReportsUI();
+            ReportsUI2 mdiChild = new ReportsUI2();
             mdiChild.MdiParent = this;
             mdiChild.Show();
         }

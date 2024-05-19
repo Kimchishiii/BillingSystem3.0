@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.btnEditInvoice = new System.Windows.Forms.Button();
             this.btnShowInvoices = new System.Windows.Forms.Button();
             this.dtgRecords3 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,6 +70,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1581, 121);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(539, 43);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 30);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -129,7 +143,7 @@
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(105, 30);
             this.btnShow.TabIndex = 7;
-            this.btnShow.Text = "View";
+            this.btnShow.Text = "View All";
             this.btnShow.UseVisualStyleBackColor = false;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
@@ -173,6 +187,7 @@
             this.dtgRecords2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgRecords2.Size = new System.Drawing.Size(830, 257);
             this.dtgRecords2.TabIndex = 2;
+            this.dtgRecords2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgRecords2_CellContentClick);
             // 
             // panel3
             // 
@@ -258,20 +273,6 @@
             this.dtgRecords3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgRecords3.Size = new System.Drawing.Size(830, 294);
             this.dtgRecords3.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(539, 43);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 30);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // printDialog1
             // 
